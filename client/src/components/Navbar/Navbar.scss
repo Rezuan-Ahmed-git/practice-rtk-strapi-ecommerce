@@ -21,6 +21,11 @@
         .center {
             font-size: 30px;
             letter-spacing: 2px;
+
+            .link {
+                display: flex;
+                align-items: center;
+            }
         }
         .right {
             display: flex;
