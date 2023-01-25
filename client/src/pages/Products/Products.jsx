@@ -20,8 +20,8 @@ const Products = () => {
             <label htmlFor="1">Shoes</label>
           </div>
           <div className="inputItem">
-            <input type="checkbox" id="3" value={3} />
-            <label htmlFor="3">Skirts</label>
+            <input type="checkbox" id="2" value={2} />
+            <label htmlFor="2">Skirts</label>
           </div>
           <div className="inputItem">
             <input type="checkbox" id="3" value={3} />
