@@ -7,26 +7,6 @@ const FeaturedProducts = ({ type }) => {
     `/products?populate=*&[filters][type][$eq]=${type}`
   );
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await axios.get(
-  //         process.env.REACT_APP_API_URL +
-  //           `/products?populate=*&[filters][type][$eq]=${type}`,
-  //         {
-  //           headers: {
-  //             Authorization: `bearer ${process.env.REACT_APP_API_TOKEN}`,
-  //           },
-  //         }
-  //       );
-  //       setData(res.data.data);
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
-
   return (
     <div className="featuredProducts">
       <div className="top">
@@ -40,7 +20,9 @@ const FeaturedProducts = ({ type }) => {
       </div>
 
       <div className="bottom">
-        {loading
+        {error
+          ? 'Something went wrong'
+          : loading
           ? 'Loading...'
           : data.map((item) => <Card item={item} key={item.id} />)}
       </div>
