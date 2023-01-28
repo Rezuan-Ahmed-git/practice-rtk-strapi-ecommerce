@@ -29,12 +29,12 @@ const Navbar = () => {
           </div>
           <div className="item">
             <Link className="link" to="/products/1">
-              Women
+              Men
             </Link>
           </div>
           <div className="item">
             <Link className="link" to="/products/2">
-              Men
+              Women
             </Link>
           </div>
           <div className="item">
