@@ -9,7 +9,7 @@ const Products = () => {
   const catId = parseInt(useParams().id);
 
   const [maxPrice, setMaxPrice] = useState(1000);
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState('asc');
 
   const [selectedSubCats, setselectedSubCats] = useState([]);
 
@@ -27,8 +27,6 @@ const Products = () => {
         : selectedSubCats.filter((item) => item !== value)
     );
   };
-
-  console.log(selectedSubCats);
 
   return (
     <div className="products">
